@@ -1,24 +1,67 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
-import Benefits from "./components/Benefits";
-import Collaboration from "./components/Collaboration";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
-import Services from "./components/Services";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import SignUp from "./pages/SignUp.jsx";
+import SignIn from "./pages/SignIn.jsx";
+import Tasks from "./pages/Tasks.jsx";
+import Team from "./pages/Team.jsx";
+import Profile from "./pages/Profile.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Recharge from "./pages/Recharge.jsx";
+import TaskDetail from "./pages/TaskDetail.jsx";
+import Home from "./pages/Home.jsx";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Benefits />
-        <Footer />
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<Dashboard />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route
+        path="/tasks"
+        element={
+          <ProtectedRoute>
+            <Tasks />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/team"
+        element={
+          <ProtectedRoute>
+            <Team />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/me"
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recharge"
+        element={
+          <ProtectedRoute>
+            <Recharge />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/details/:id"
+        element={
+          <ProtectedRoute>
+            <TaskDetail />
+          </ProtectedRoute>
+        }
+      />
+      {/* Wildcard route for handling undefined pages */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
-};
+}
 
 export default App;
