@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.jsx";
-import NotFound from "./pages/NotFound.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import Tasks from "./pages/Tasks.jsx";
@@ -59,7 +58,7 @@ function App() {
         }
       />
       {/* Wildcard route for handling undefined pages */}
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<SignIn />} />
     </Routes>
   );
 }
