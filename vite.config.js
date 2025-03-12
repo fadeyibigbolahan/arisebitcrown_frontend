@@ -1,14 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/", // Ensure correct base path
   plugins: [react()],
   build: {
-    outDir: "dist", // Default build output
+    outDir: "dist", // Ensure the build directory is correct
   },
   server: {
-    historyApiFallback: true, // Ensures proper routing in dev
+    historyApiFallback: true, // Fix routing in dev mode
+  },
+  preview: {
+    historyApiFallback: true, // Fix routing in production preview
   },
 });
