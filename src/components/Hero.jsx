@@ -8,6 +8,7 @@ import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -39,9 +40,9 @@ const Hero = () => {
             Join thousands of users making money online by performing easy tasks
             daily
           </p>
-          <Button href="/tasks" white>
-            Get started
-          </Button>
+          <Link to="/tasks">
+            <Button white>Get started</Button>
+          </Link>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">

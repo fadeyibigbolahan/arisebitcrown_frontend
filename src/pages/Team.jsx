@@ -15,7 +15,7 @@ const Team = () => {
     if (user) {
       setInvitationCode(user.verificationCode),
         setInvitationLink(
-          `https://arisebitcrown.com/#/register?ic=${user.verificationCode}`
+          `https://arisebitcrown.com/#/signup?ic=${user.verificationCode}`
         );
     }
   }, [user]);
