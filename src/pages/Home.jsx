@@ -5,14 +5,12 @@ import Hero from "../components/Hero";
 
 const Home = () => {
   return (
-    <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Benefits />
-        <Footer />
-      </div>
-    </>
+    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <Header />
+      <Hero />
+      <Benefits />
+      <Footer />
+    </div>
   );
 };
 
