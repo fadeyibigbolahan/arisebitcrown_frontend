@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../api";
 import cryptomusss from "../assets/cryptomusss.webp";
@@ -104,9 +104,9 @@ const SignIn = () => {
         )}
         <p className="text-center text-gray-600 text-sm mt-4">
           Don't have an account?{" "}
-          <a href="signup" className="text-blue-500 hover:underline">
+          <Link to="/signup" className="text-blue-500 hover:underline">
             Sign Up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

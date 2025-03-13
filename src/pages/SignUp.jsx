@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../api";
 
@@ -144,9 +144,9 @@ const SignUp = () => {
         )}
         <p className="text-center text-gray-600 text-sm mt-4">
           Already have an account?{" "}
-          <a href="/signin" className="text-blue-500 hover:underline">
+          <Link to="/signin" className="text-blue-500 hover:underline">
             Sign In
-          </a>
+          </Link>
         </p>
       </div>
     </div>
