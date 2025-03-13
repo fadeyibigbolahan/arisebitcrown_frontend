@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { brainwave } from "../assets";
@@ -68,16 +68,15 @@ const Header = () => {
           <div className="relative z-2 flex items-center justify-center m-auto flex-row">
             {/* item.title === activeNav */}
             {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
+              <Link
+                to={item.url}
                 onClick={() => handleClick(item.title)}
                 className={`flex relative cursor-pointer font-code leading-2 hover:text-n-1 px-5 ${
                   item.url === pathname.pathname ? "text-n-1" : "text-n-4"
                 }`}
               >
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>
