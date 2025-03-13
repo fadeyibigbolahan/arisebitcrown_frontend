@@ -53,11 +53,6 @@ export const navigation = [
     url: "/team",
   },
   {
-    id: "3",
-    title: "VIP",
-    url: "/vip",
-  },
-  {
     id: "4",
     title: "Me",
     url: "/me",

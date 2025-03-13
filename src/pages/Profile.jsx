@@ -34,23 +34,30 @@ const Profile = () => {
             </div>
           </div>
         </div>
-        {/* <div className="flex flex-row justify-evenly items-center gap-6 rounded-lg bg-white w-[90%] lg:w-[60%] p-4 m-[5px]">
+        <div className="flex flex-row justify-evenly items-center gap-6 rounded-lg bg-white w-[90%] lg:w-[60%] p-4 m-[5px]">
           <div>
-            <a href="/recharge" className="text-black text-xs text-center">
-              Recharge
-            </a>
-          </div>
-          <div>
-            <a href="#" className="text-black text-xs text-center">
+            <button
+              onClick={() =>
+                alert(
+                  "You can only withdraw from your wallet after 2 weeks of task activation."
+                )
+              }
+              className="text-white hover:bg-black text-xs text-center bg-[#AC6AFF] rounded-md p-2"
+            >
               Withdraw
-            </a>
+            </button>
           </div>
           <div>
-            <a href="#" className="text-black text-xs text-center">
+            <button
+              onClick={() =>
+                alert("This feature is unavailable, check back soon.")
+              }
+              className="text-white hover:bg-black text-xs text-center bg-[#AC6AFF] rounded-md p-2"
+            >
               History
-            </a>
+            </button>
           </div>
-        </div> */}
+        </div>
         <div className="flex flex-col justify-evenly items-start gap-6 rounded-t-lg bg-[#AC6AFF] w-[90%] lg:w-[60%] p-4 m-[5px]">
           {/* <div
             onClick={() => navigate("/me")}
