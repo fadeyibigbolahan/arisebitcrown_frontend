@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useAuth } from "../context/AuthContext";
 
+import { FaAngleRight } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
@@ -67,7 +69,7 @@ const Profile = () => {
             className="flex flex-row w-full justify-between items-center hover:bg-white/50 p-2 rounded-md"
           >
             <p className="text-black text-xs text-center">Sign Out</p>
-            <p className="text-black text-xs text-center">icon</p>
+            <FaAngleRight className="text-black text-xs text-center" />
           </div>
         </div>
       </div>

@@ -69,17 +69,21 @@ const Header = () => {
         >
           <div className="relative z-2 flex items-center justify-center m-auto flex-row">
             {/* item.title === activeNav */}
-            {navigation.map((item) => (
-              <Link
-                to={item.url}
-                onClick={() => handleClick(item.title)}
-                className={`flex relative cursor-pointer font-code leading-2 hover:text-n-1 px-5 ${
-                  item.url === pathname.pathname ? "text-n-1" : "text-n-4"
-                }`}
-              >
-                {item.title}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  to={item.url}
+                  onClick={() => handleClick(item.title)}
+                  className={`flex flex-col justify-center items-center relative cursor-pointer font-code leading-2 hover:text-n-1 px-5 ${
+                    item.url === pathname.pathname ? "text-n-1" : "text-n-4"
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  <span>{item.title}</span>
+                </Link>
+              );
+            })}
           </div>
         </nav>
       </div>

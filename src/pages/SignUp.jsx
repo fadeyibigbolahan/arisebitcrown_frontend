@@ -64,7 +64,7 @@ const SignUp = () => {
       <div className="bg-[#065AD8] hidden md:flex justify-center items-center p-8 shadow-md w-full md:w-1/2 h-screen">
         <img src={cryptomusss} alt="crypt" />
       </div>
-      <div className="flex flex-col justify-center items-center bg-[#FFFFFF] md:p-8 p-4 shadow-md w-full md:w-1/2 md:h-screen">
+      <div className="flex flex-col justify-center items-center md:bg-[#FFFFFF] bg-black/90 md:p-8 p-4 shadow-md w-full md:w-1/2 md:h-screen">
         <div className="md:hidden flex justify-center items-center w-full my-4 bg-black fixed top-[-15px] py-4">
           <a className="block" href="/">
             <img src={brainwave} width={190} height={40} alt="Brainwave" />

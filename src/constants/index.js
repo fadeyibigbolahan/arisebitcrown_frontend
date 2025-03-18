@@ -35,27 +35,33 @@ import {
   twitter,
   yourlogo,
 } from "../assets";
+import { FaHome, FaTasks, FaUser } from "react-icons/fa";
+import { RiTeamFill } from "react-icons/ri";
 
 export const navigation = [
   {
     id: "0",
     title: "Home",
     url: "/",
+    icon: FaHome,
   },
   {
     id: "1",
     title: "Task",
     url: "/tasks",
+    icon: FaTasks,
   },
   {
     id: "2",
     title: "Team",
     url: "/team",
+    icon: RiTeamFill,
   },
   {
     id: "4",
     title: "Me",
     url: "/me",
+    icon: FaUser,
   },
 ];
 
