@@ -1,7 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { brainwave } from "../assets";
+// import { brainwave-symbol } from "../assets";
+import brainwaveSymbol from "../assets/brainwave-symbol.svg";
+
 import {
   buildSoftwareNav,
   collectLeadNav,
@@ -58,7 +60,7 @@ const Header = () => {
     >
       <div className="flex flex-col gap-5 items-center justify-center p-7 w-full">
         <a className="block" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+          <img src={brainwaveSymbol} width={40} height={40} alt="Brainwave" />
         </a>
 
         <nav
