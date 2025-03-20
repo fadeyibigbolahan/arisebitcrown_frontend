@@ -61,7 +61,7 @@ const SignIn = () => {
         <img src={cryptomusss} alt="crypt" />
       </div>
       <div
-        style={{ backgroundImage: `url(${brainwaveSymbol})` }}
+        style={{ backgroundImage: `url(${cryptomusss})` }}
         className="flex justify-center items-center w-full md:w-1/2 h-screen"
       >
         <div className="flex flex-col justify-center items-center w-full h-full bg-black/80 md:p-8 shadow-md">

@@ -66,7 +66,7 @@ const SignUp = () => {
         <img src={cryptomusss} alt="crypt" />
       </div>
       <div
-        style={{ backgroundImage: `url(${brainwaveSymbol})` }}
+        style={{ backgroundImage: `url(${cryptomusss})` }}
         className="flex justify-center items-center w-full md:w-1/2"
       >
         <div className="flex flex-col justify-center items-center bg-black/80 md:p-8 p-4 shadow-md w-full">
@@ -81,7 +81,7 @@ const SignUp = () => {
             </a>
           </div>
           <div className="h-[100px]"></div>
-          <form onSubmit={onSignUp} className="space-y-4 w-[80%]">
+          <form onSubmit={onSignUp} className="space-y-4 w-[90%]">
             <div>
               <label className="block text-gray-600">Name</label>
               <input
