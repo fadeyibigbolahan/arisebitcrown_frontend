@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { brainwave } from "../assets";
 import bep20 from "../assets/bep20.webp";
 import trc20 from "../assets/trc20.jpg";
+import { FaAngleRight } from "react-icons/fa";
 
 const TaskDetail = () => {
   const location = useLocation();
@@ -16,11 +17,6 @@ const TaskDetail = () => {
     return <p>No data available. Please go back and select an item.</p>;
   }
 
-  useEffect(() => {
-    console.log("t payment", activePayment);
-  }, [activePayment]);
-
-  console.log("itm", item);
   const handleCopy = (textToCopy) => {
     navigator.clipboard
       .writeText(textToCopy)
@@ -93,14 +89,14 @@ const TaskDetail = () => {
                   className="flex flex-row w-full justify-between items-center hover:bg-white/50 p-2 rounded-md"
                 >
                   <p className="text-black text-xs text-center">BEP20-USDT</p>
-                  <p className="text-black text-xs text-center">icon</p>
+                  <FaAngleRight className="text-black text-xs text-center" />
                 </div>
                 <div
                   onClick={() => setActivePayment("TRC20-USDT")}
                   className="flex flex-row w-full justify-between items-center hover:bg-white/50 p-2 rounded-md"
                 >
                   <p className="text-black text-xs text-center">TRC20-USDT</p>
-                  <p className="text-black text-xs text-center">icon</p>
+                  <FaAngleRight className="text-black text-xs text-center" />
                 </div>
               </div>
               {activePayment === "BEP20-USDT" && (
@@ -148,6 +144,9 @@ const TaskDetail = () => {
                       </span>
                     )}
                   </div>
+                  <button className="bg-black text-white rounded-md p-1 px-2 my-4">
+                    Click here after payment is successful to submit proof
+                  </button>
                   <div className="flex flex-col text-sm justify-center items-start gap-4 rounded-md bg-[#AC6AFF] p-4">
                     <p>
                       1. Copy the address above or scan the QR code and select

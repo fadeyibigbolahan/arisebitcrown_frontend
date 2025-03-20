@@ -65,6 +65,29 @@ export const navigation = [
   },
 ];
 
+export const transactionHeading = [
+  {
+    id: 1,
+    name: "S/N",
+  },
+  {
+    id: 2,
+    name: "AMOUNT (NGN)",
+  },
+  {
+    id: 3,
+    name: "TRANSACTION ID",
+  },
+  {
+    id: 4,
+    name: "STATUS",
+  },
+  {
+    id: 5,
+    name: "DATE",
+  },
+];
+
 export const tasks = [
   {
     id: "0",

@@ -9,6 +9,7 @@ import Generating from "./Generating";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import { Link } from "react-router-dom";
+import MarqueeComponent from "./MarqueeComponent";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -22,7 +23,18 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
+        <MarqueeComponent />
+
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+          <div className="my-4">
+            <Link
+              to="/about"
+              className="hover:bg-white hover:text-black px-2 py-1 border-white border-2 rounded-full"
+            >
+              About Us
+            </Link>
+          </div>
+
           <h1 className="h1 mb-6">
             Earn Rewards by Completing Simple Tasks with {` `}
             <span className="inline-block relative">

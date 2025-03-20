@@ -1,15 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 import { FaAngleRight } from "react-icons/fa";
 
 import { useNavigate } from "react-router-dom";
+import { transactionHeading } from "../constants";
 
 const Profile = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
@@ -46,14 +50,11 @@ const Profile = () => {
             </button>
           </div>
           <div>
-            <button
-              onClick={() =>
-                alert("This feature is unavailable, check back soon.")
-              }
-              className="text-white hover:bg-black text-xs text-center bg-[#AC6AFF] rounded-md p-2"
-            >
-              History
-            </button>
+            <Link to="/transactions">
+              <button className="text-white hover:bg-black text-xs text-center bg-[#AC6AFF] rounded-md p-2">
+                History
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col justify-evenly items-start gap-6 rounded-t-lg bg-[#AC6AFF] w-[90%] lg:w-[60%] p-4 m-[5px]">

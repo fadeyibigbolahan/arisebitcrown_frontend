@@ -6,6 +6,7 @@ import { url } from "../../api";
 import cryptomusss from "../assets/cryptomusss.webp";
 import Header from "../components/Header";
 import { brainwave } from "../assets";
+import brainwaveSymbol from "../assets/brainwave-symbol.svg";
 
 const SignUp = () => {
   const [searchParams] = useSearchParams();
@@ -64,90 +65,100 @@ const SignUp = () => {
       <div className="bg-[#065AD8] hidden md:flex justify-center items-center p-8 shadow-md w-full md:w-1/2 h-screen">
         <img src={cryptomusss} alt="crypt" />
       </div>
-      <div className="flex flex-col justify-center items-center md:bg-[#FFFFFF] bg-black/90 md:p-8 p-4 shadow-md w-full md:w-1/2 md:h-screen">
-        <div className="md:hidden flex justify-center items-center w-full my-4 bg-black fixed top-[-15px] py-4">
-          <a className="block" href="/">
-            <img src={brainwave} width={190} height={40} alt="Brainwave" />
-          </a>
+      <div
+        style={{ backgroundImage: `url(${brainwaveSymbol})` }}
+        className="flex justify-center items-center w-full md:w-1/2"
+      >
+        <div className="flex flex-col justify-center items-center bg-black/80 md:p-8 p-4 shadow-md w-full">
+          <div className="md:hidden flex justify-center items-center w-full my-4 bg-black fixed top-[-15px] py-4">
+            <a className="block" href="/">
+              <img
+                src={brainwaveSymbol}
+                width={40}
+                height={40}
+                alt="Brainwave"
+              />
+            </a>
+          </div>
+          <div className="h-[100px]"></div>
+          <form onSubmit={onSignUp} className="space-y-4 w-[80%]">
+            <div>
+              <label className="block text-gray-600">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-gray-600">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-gray-600">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-gray-600">Password</label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-gray-600">Referral Code</label>
+              <input
+                type="text"
+                name="referral"
+                value={formData.referral}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter referral code (optional)"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
+              disabled={loading}
+            >
+              {loading ? "Signing Up..." : "Sign Up"}
+            </button>
+          </form>
+          {message && (
+            <p className="text-center text-gray-600 text-sm mt-4">{message}</p>
+          )}
+          <p className="text-center text-gray-600 text-sm mt-4">
+            Already have an account?{" "}
+            <Link to="/signin" className="text-blue-500 hover:underline">
+              Sign In
+            </Link>
+          </p>
         </div>
-        <div className="h-[100px]"></div>
-        <form onSubmit={onSignUp} className="space-y-4 w-[80%]">
-          <div>
-            <label className="block text-gray-600">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-600">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-600">Phone Number</label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your phone number"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-600">Password</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-600">Referral Code</label>
-            <input
-              type="text"
-              name="referral"
-              value={formData.referral}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-md bg-[#FAFCFE] text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Enter referral code (optional)"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition"
-            disabled={loading}
-          >
-            {loading ? "Signing Up..." : "Sign Up"}
-          </button>
-        </form>
-        {message && (
-          <p className="text-center text-gray-600 text-sm mt-4">{message}</p>
-        )}
-        <p className="text-center text-gray-600 text-sm mt-4">
-          Already have an account?{" "}
-          <Link to="/signin" className="text-blue-500 hover:underline">
-            Sign In
-          </Link>
-        </p>
       </div>
     </div>
   );
