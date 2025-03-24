@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../api";
 import cryptomusss from "../assets/cryptomusss.webp";
@@ -15,6 +15,7 @@ const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const [message, setMessage] = useState("");
+  const location = useLocation();
 
   const onSignIn = async (e) => {
     e.preventDefault();
@@ -54,6 +55,13 @@ const SignIn = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (location.state) {
+      setEmail(location.state.email);
+      setPassword(location.state.password);
+    }
+  }, [location.state]);
 
   return (
     <div className="bg-gray-100 flex flex-col md:flex-row items-center justify-center min-h-screen">

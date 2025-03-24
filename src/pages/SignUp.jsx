@@ -50,7 +50,7 @@ const SignUp = () => {
 
       // Redirect to login or dashboard after successful registration
       setTimeout(() => {
-        navigate("/signin");
+        navigate("/signin", { state: formData });
       }, 2000);
     } catch (error) {
       setMessage(error.response?.data?.message || "Registration failed!");

@@ -6,7 +6,7 @@ import brainwaveSymbol from "../assets/brainwave-symbol.svg";
 const Transaction = () => {
   return (
     <div className="flex flex-col gap-y-4">
-      <div className="md:hidden flex justify-center items-center w-full my-4 bg-black absolute top-[-15px] py-4">
+      <div className="flex justify-center items-center w-full my-4 bg-black absolute top-[-15px] py-4">
         <a className="block" href="/">
           <img src={brainwaveSymbol} width={40} height={40} alt="Brainwave" />
         </a>

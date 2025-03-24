@@ -11,6 +11,7 @@ import Recharge from "./pages/Recharge.jsx";
 import TaskDetail from "./pages/TaskDetail.jsx";
 import Home from "./pages/Home.jsx";
 import Transaction from "./pages/Transaction.jsx";
+import Confirm from "./pages/Confirm.jsx";
 
 function App() {
   return (
@@ -19,6 +20,14 @@ function App() {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/about" element={<About />} />
+      <Route
+        path="/confirm-payment"
+        element={
+          <ProtectedRoute>
+            <Confirm />
+          </ProtectedRoute>
+        }
+      />
       <Route
         path="/tasks"
         element={

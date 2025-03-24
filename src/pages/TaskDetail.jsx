@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { brainwave } from "../assets";
 import bep20 from "../assets/bep20.webp";
 import trc20 from "../assets/trc20.jpg";
@@ -144,9 +144,11 @@ const TaskDetail = () => {
                       </span>
                     )}
                   </div>
-                  <button className="bg-black text-white rounded-md p-1 px-2 my-4">
-                    Click here after payment is successful to submit proof
-                  </button>
+                  <Link to="/confirm-payment">
+                    <button className="bg-black text-white rounded-md p-1 px-2 my-4 shadow-md">
+                      Click here after payment is successful to submit proof
+                    </button>
+                  </Link>
                   <div className="flex flex-col text-sm justify-center items-start gap-4 rounded-md bg-[#AC6AFF] p-4">
                     <p>
                       1. Copy the address above or scan the QR code and select
@@ -208,6 +210,11 @@ const TaskDetail = () => {
                       </span>
                     )}
                   </div>
+                  <Link to="/confirm-payment">
+                    <button className="bg-black text-white rounded-md p-1 px-2 my-4 shadow-md">
+                      Click here after payment is successful to submit proof
+                    </button>
+                  </Link>
                   <div className="flex flex-col text-sm justify-center items-start gap-4 rounded-md bg-[#AC6AFF] p-4">
                     <p>
                       1. Copy the address above or scan the QR code and choose
