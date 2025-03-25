@@ -33,7 +33,7 @@ export default function Admin() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/tasks/complete-task",
+        "https://arisebitcrown.com/api/tasks/complete-task",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
