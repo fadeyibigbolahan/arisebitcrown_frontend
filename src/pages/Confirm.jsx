@@ -1,45 +1,43 @@
 import { useState } from "react";
-import { url } from "../../api";
 import { useAuth } from "../context/AuthContext";
 
 export default function UploadForm() {
   const [text, setText] = useState("");
-  const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false); // Loading state
   const { user } = useAuth();
 
-  const handleImageChange = (event) => {
-    setImage(event.target.files[0]);
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!text || !image) {
-      alert("Please select a task and upload a receipt.");
+
+    if (!text) {
+      alert("Please select a task.");
       return;
     }
 
     setLoading(true); // Start loading
 
-    const formData = new FormData();
-    formData.append("email", user.email);
-    formData.append("text", text);
-    formData.append("image", image);
+    const payload = {
+      email: user?.email,
+      text,
+    };
+
+    console.log("Sending Payload:", payload); // Debugging
 
     try {
-      const response = await fetch(
-        "https://arisebitcrown-api.onrender.com/send-email",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
       if (response.ok) {
         alert("Email sent successfully! Check back in the next 5 minutes.");
         setText("");
-        setImage(null);
       } else {
+        const errorText = await response.text();
+        console.error("Response Error:", errorText);
         alert("Error sending email.");
       }
     } catch (error) {
@@ -53,24 +51,15 @@ export default function UploadForm() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-2xl font-bold mb-4">Confirm Payment</h1>
-      <p className="mb-4">Please upload the payment receipt.</p>
+      <p className="mb-4">Please select a task.</p>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center p-4 border rounded-lg shadow-md md:w-1/2 w-full"
       >
         <div className="flex flex-col justify-center items-center mb-4 gap-2">
-          <span className="bg-white p-1 rounded-sm text-black ml">
-            Account:
-          </span>
+          <span className="bg-white p-1 rounded-sm text-black">Account:</span>
           <p>{user?.email}</p>
         </div>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-          required
-          className="mb-4 flex justify-center items-center"
-        />
         <select
           value={text}
           onChange={(e) => setText(e.target.value)}

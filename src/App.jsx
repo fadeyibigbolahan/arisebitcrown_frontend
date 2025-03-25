@@ -12,6 +12,7 @@ import TaskDetail from "./pages/TaskDetail.jsx";
 import Home from "./pages/Home.jsx";
 import Transaction from "./pages/Transaction.jsx";
 import Confirm from "./pages/Confirm.jsx";
+import Admin from "./pages/Admin.jsx";
 
 function App() {
   return (
@@ -57,6 +58,14 @@ function App() {
         element={
           <ProtectedRoute>
             <Transaction />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/power-page"
+        element={
+          <ProtectedRoute>
+            <Admin />
           </ProtectedRoute>
         }
       />
