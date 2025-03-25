@@ -33,7 +33,7 @@ export default function Admin() {
 
     try {
       const response = await fetch(
-        "https://arisebitcrown.com/api/tasks/complete-task",
+        "https://arisebitcrown-api.onrender.com/api/tasks/complete-task",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
