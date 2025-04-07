@@ -42,6 +42,7 @@ const SignIn = () => {
         walletBalance: response.data.walletBalance,
         compeltedTasks: response.data.compeltedTasks,
         transactions: response.data.transactions,
+        createdAt: response.data.createdAt,
       });
 
       // Redirect to the dashboard or homepage

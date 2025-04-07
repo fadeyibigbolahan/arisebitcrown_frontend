@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useAuth } from "../context/AuthContext";
@@ -12,6 +12,26 @@ import { transactionHeading } from "../constants";
 const Profile = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log("user", user);
+  }, [user]);
+
+  const isOverTwoWeeksOld = (createdAt) => {
+    const createdDate = new Date(createdAt);
+    const now = new Date();
+    const diffInMs = now - createdDate;
+    const twoWeeksInMs = 14 * 24 * 60 * 60 * 1000;
+    return diffInMs > twoWeeksInMs;
+  };
+
+  const withdrawfunction = () => {
+    if (isOverTwoWeeksOld(user.createdAt)) {
+      alert("To be able to withdraw, you need to refer a user.");
+    } else {
+      alert("You are not eligible to withdraw yet.");
+    }
+  };
 
   const [modalVisible, setModalVisible] = useState(false);
 
@@ -39,11 +59,7 @@ const Profile = () => {
         <div className="flex flex-row justify-evenly items-center gap-6 rounded-lg bg-white w-[90%] lg:w-[60%] p-4 m-[5px]">
           <div>
             <button
-              onClick={() =>
-                alert(
-                  "You can only withdraw from your wallet after 2 weeks of task activation."
-                )
-              }
+              onClick={() => withdrawfunction()}
               className="text-white hover:bg-black text-xs text-center bg-[#AC6AFF] rounded-md p-2"
             >
               Withdraw
