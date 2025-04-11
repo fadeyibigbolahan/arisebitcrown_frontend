@@ -30,6 +30,41 @@ const Transaction = () => {
       status: "successful",
       date: "27/03/2025",
     },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "58uh56891878f2cf3e4c971c",
+      status: "successful",
+      date: "13/03/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "ou89v6891878f2cf3e4c9f5",
+      status: "successful",
+      date: "27/02/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "jh56wq891878f2cf3e4c9f5",
+      status: "successful",
+      date: "13/02/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "qw34cv891878f2cf3e4c9f5",
+      status: "successful",
+      date: "30/01/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "lp98ub891878f2cf3e5r43d",
+      status: "successful",
+      date: "16/01/2025",
+    },
   ];
 
   const adminTwoTransaction = [

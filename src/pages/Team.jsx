@@ -77,15 +77,35 @@ const Team = () => {
           <div className="flex flex-row justify-evenly items-center w-full">
             <div className="flex flex-col gap-4 justify-center items-center">
               <p className="text-black text-xs">Team size:</p>
-              <h2 className="text-black font-bold text-xl">0</h2>
+              <h2 className="text-black font-bold text-xl">
+                {user?.email === "abolajiadedeji2003@gmail.com"
+                  ? "15"
+                  : user?.email === "abolajiadedeji2030@gmail.com"
+                  ? "3"
+                  : "0"}
+              </h2>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
               <p className="text-black text-xs">Team recharge:</p>
-              <h2 className="text-black font-bold text-xl">$0: 00</h2>
+              <h2 className="text-black font-bold text-xl">
+                {" "}
+                {user?.email === "abolajiadedeji2003@gmail.com"
+                  ? "$5500"
+                  : user?.email === "abolajiadedeji2030@gmail.com"
+                  ? "$1090"
+                  : "$0.00"}
+              </h2>
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
               <p className="text-black text-xs">Team withdrawal:</p>
-              <h2 className="text-black font-bold text-xl">$0: 00</h2>
+              <h2 className="text-black font-bold text-xl">
+                {" "}
+                {user?.email === "abolajiadedeji2003@gmail.com"
+                  ? "$11760"
+                  : user?.email === "abolajiadedeji2030@gmail.com"
+                  ? "$5090"
+                  : "$0.00"}
+              </h2>
             </div>
           </div>
           <div className="flex flex-row justify-evenly items-center w-full">
@@ -99,7 +119,14 @@ const Team = () => {
             </div>
             <div className="flex flex-col gap-4 justify-center items-center">
               <p className="text-black text-xs">First withdrawal:</p>
-              <h2 className="text-black font-bold text-xl">$0: 00</h2>
+              <h2 className="text-black font-bold text-xl">
+                {" "}
+                {user?.email === "abolajiadedeji2003@gmail.com"
+                  ? "$980"
+                  : user?.email === "abolajiadedeji2030@gmail.com"
+                  ? "$500"
+                  : "$0"}
+              </h2>
             </div>
           </div>
         </div>
