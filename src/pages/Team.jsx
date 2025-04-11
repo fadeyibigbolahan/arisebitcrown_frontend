@@ -81,7 +81,7 @@ const Team = () => {
                 {user?.email === "abolajiadedeji2003@gmail.com"
                   ? "15"
                   : user?.email === "abolajiadedeji2030@gmail.com"
-                  ? "3"
+                  ? "1"
                   : "0"}
               </h2>
             </div>
@@ -92,7 +92,7 @@ const Team = () => {
                 {user?.email === "abolajiadedeji2003@gmail.com"
                   ? "$5500"
                   : user?.email === "abolajiadedeji2030@gmail.com"
-                  ? "$1090"
+                  ? "$10500"
                   : "$0.00"}
               </h2>
             </div>
@@ -103,7 +103,7 @@ const Team = () => {
                 {user?.email === "abolajiadedeji2003@gmail.com"
                   ? "$11760"
                   : user?.email === "abolajiadedeji2030@gmail.com"
-                  ? "$5090"
+                  ? "$1500"
                   : "$0.00"}
               </h2>
             </div>
@@ -124,7 +124,7 @@ const Team = () => {
                 {user?.email === "abolajiadedeji2003@gmail.com"
                   ? "$980"
                   : user?.email === "abolajiadedeji2030@gmail.com"
-                  ? "$500"
+                  ? "$1500"
                   : "$0"}
               </h2>
             </div>
