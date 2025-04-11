@@ -69,11 +69,18 @@ const Transaction = () => {
 
   const adminTwoTransaction = [
     {
-      amount: "1000 USDT",
+      amount: "500 USDT",
       description: "Withdrawal",
       transactionId: "67f8326e289c611fc7575682",
       status: "successful",
       date: "10/04/2025",
+    },
+    {
+      amount: "1000 USDT",
+      description: "Withdrawal",
+      transactionId: "67f8326e289c611fc7575682",
+      status: "successful",
+      date: "26/03/2025",
     },
   ];
   return (
