@@ -10,6 +10,7 @@ import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import { Link } from "react-router-dom";
 import MarqueeComponent from "./MarqueeComponent";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -33,6 +34,14 @@ const Hero = () => {
             >
               About Us
             </Link>
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-3 my-4 mt-8">
+            <h2 className="text-white">Customer Care</h2>
+            <div className="flex items-center gap-2 text-white hover:text-green-500">
+              <BsWhatsapp />
+              <a href="https://wa.me/12763009171">+1(276)300-9171</a>
+            </div>
           </div>
 
           <h1 className="h1 mb-6">
