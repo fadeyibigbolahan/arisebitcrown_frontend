@@ -26,11 +26,12 @@ const Profile = () => {
   };
 
   const withdrawfunction = () => {
-    if (isOverTwoWeeksOld(user.createdAt)) {
-      alert("To be able to withdraw, you need to refer a user.");
-    } else {
-      alert("You are not eligible to withdraw yet.");
-    }
+    // if (isOverTwoWeeksOld(user.createdAt)) {
+    //   alert("To be able to withdraw, you need to refer a user.");
+    // } else {
+    //   alert("You are not eligible to withdraw yet.");
+    // }
+    alert("We are sorry about the inconvenience. System is under maintenance.");
   };
 
   const [modalVisible, setModalVisible] = useState(false);
