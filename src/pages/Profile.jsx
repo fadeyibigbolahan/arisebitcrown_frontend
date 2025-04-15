@@ -26,12 +26,14 @@ const Profile = () => {
   };
 
   const withdrawfunction = () => {
-    // if (isOverTwoWeeksOld(user.createdAt)) {
-    //   alert("To be able to withdraw, you need to refer a user.");
-    // } else {
-    //   alert("You are not eligible to withdraw yet.");
-    // }
-    alert("We are sorry about the inconvenience. System is under maintenance.");
+    if (user?.email === "abolajiadedeji2030@gmail.com") {
+      alert(
+        "You have to wait for 2 weeks to withdraw your earnings due to your recent withdrawal."
+      );
+    } else {
+      alert("To be able to withdraw, you need to refer a user.");
+    }
+    // alert("We are sorry about the inconvenience. System is under maintenance.");
   };
 
   const [modalVisible, setModalVisible] = useState(false);

@@ -69,6 +69,13 @@ const Transaction = () => {
 
   const adminTwoTransaction = [
     {
+      amount: "10000 USDT",
+      description: "Withdrawal",
+      transactionId: "ksjdk90d4n611fc7575682",
+      status: "successful",
+      date: "15/04/2025",
+    },
+    {
       amount: "500 USDT",
       description: "Withdrawal",
       transactionId: "67f8326e289c611fc7575682",
@@ -148,7 +155,7 @@ const Transaction = () => {
               </div>
             ))}
           </div>
-          {adminTransaction.length > 0 ? (
+          {adminTwoTransaction.length > 0 ? (
             adminTwoTransaction.map((transaction, idx) => (
               <div
                 key={idx}
