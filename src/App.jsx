@@ -18,8 +18,8 @@ import Maintenance from "./pages/Maintenance.jsx";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Maintenance />} />
-      {/* <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Maintenance />} /> */}
+      <Route path="/" element={<Home />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/about" element={<About />} />
@@ -78,10 +78,10 @@ function App() {
             <TaskDetail />
           </ProtectedRoute>
         }
-      /> */}
+      />
       {/* Wildcard route for handling undefined pages */}
-      <Route path="*" element={<Maintenance />} />
-      {/* <Route path="*" element={<SignIn />} /> */}
+      {/* <Route path="*" element={<Maintenance />} /> */}
+      <Route path="*" element={<SignIn />} />
     </Routes>
   );
 }
