@@ -25,7 +25,7 @@ export default function UploadForm() {
 
     try {
       const response = await fetch(
-        "https://arisebitcrown-api.onrender.com/send-email",
+        "https://arisebitcrown-api-rpj3.onrender.com/send-email",
         {
           method: "POST",
           headers: {
