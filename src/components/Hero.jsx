@@ -36,13 +36,13 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col justify-center items-center gap-3 my-4 mt-8">
+          {/* <div className="flex flex-col justify-center items-center gap-3 my-4 mt-8">
             <h2 className="text-white">Customer Care</h2>
             <div className="flex items-center gap-2 text-white hover:text-green-500">
               <BsWhatsapp />
               <a href="https://wa.me/12763009171">+1(276)300-9171</a>
             </div>
-          </div>
+          </div> */}
 
           <h1 className="h1 mb-6">
             Earn Rewards by Completing Simple Tasks with {` `}
