@@ -122,14 +122,14 @@ const TaskDetail = () => {
                           Address:
                         </p>
                         <h2 className="text-black bg-gray-200 w-full p-2 rounded-full font-bold text-xs text-center text-wrap">
-                          {"0xff87740c168cb23fa147bf86fd0c59e1b2981883"}
+                          {"0x4516c29302e68cE3013Af61Db093489f486983e0"}
                         </h2>
                       </div>
                       <div className="flex justify-center items-center w-1/3">
                         <button
                           onClick={() =>
                             handleCopy(
-                              "0xff87740c168cb23fa147bf86fd0c59e1b2981883"
+                              "0x4516c29302e68cE3013Af61Db093489f486983e0"
                             )
                           }
                           className="bg-black text-white rounded-full px-2"
