@@ -19,6 +19,20 @@ const Transaction = () => {
     {
       amount: "980 USDT",
       description: "Withdrawal",
+      transactionId: "67f8326e289c611fc75go87",
+      status: "successful",
+      date: "19/05/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "67f8326e289c611fc7575682",
+      status: "successful",
+      date: "24/04/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
       transactionId: "67f8326e289c611fc7575682",
       status: "successful",
       date: "10/04/2025",
@@ -68,6 +82,20 @@ const Transaction = () => {
   ];
 
   const adminTwoTransaction = [
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "67f8326e289c611fc75go87",
+      status: "successful",
+      date: "19/05/2025",
+    },
+    {
+      amount: "980 USDT",
+      description: "Withdrawal",
+      transactionId: "67f8326e289c611fc7575682",
+      status: "successful",
+      date: "29/04/2025",
+    },
     {
       amount: "10000 USDT",
       description: "Withdrawal",
